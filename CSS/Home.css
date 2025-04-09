@@ -1,0 +1,212 @@
+/* Sets the background color and default font for the body */
+body {
+  background-color: hwb(231 0% 0% / 0.418); /* Light blue background with transparency */
+  font-family: 'OpenDyslexic', sans-serif; /* Dyslexic-friendly font */
+  /* Custom scrollbar variables */
+  --sb-track-color: hsla(231, 100%, 50%, 0.5); /* Light blue scrollbar track */
+  --sb-thumb-color: #705da9; /* Purple scrollbar thumb */
+  --sb-size: 14px; /* Scrollbar width */
+}
+
+/* Customizes the appearance of the scrollbar */
+body::-webkit-scrollbar {
+  width: var(--sb-size); /* Sets scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color); /* Sets scrollbar track color */
+  border-radius: 4px; /* Rounds scrollbar track corners */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color); /* Sets scrollbar thumb color */
+  border-radius: 4px; /* Rounds scrollbar thumb corners */
+  border: 1px solid #232E33; /* Adds border to scrollbar thumb */
+}
+
+/* Fallback for browsers that don't support ::-webkit-scrollbar */
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color); /* Thumb and track colors */
+  }
+}
+
+/* Sets the font size for h1 elements */
+h1 {
+  font-size: 37px; /* Large font size for headings */
+}
+
+/* Applies the OpenDyslexic font to elements with the dyslexic-font class */
+.dyslexic-font {
+  font-family: 'OpenDyslexic', sans-serif; /* Applies dyslexic-friendly font */
+}
+
+/* Removes bullet points and applies font styles to unordered lists */
+ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  font-family: "DynaPuff", serif; /* Serif font for lists */
+  font-weight: normal; /* Normal font weight */
+  font-style: normal; /* Normal font style */
+  white-space: no-wrap; /* Prevents wrapping */
+}
+
+/* Changes background and text color when hovering over list links */
+li a:hover {
+  background-color: rgb(12, 89, 119); /* Dark blue background on hover */
+  text-decoration-color: hsl(219, 96%, 39%); /* Changes text decoration color */
+  color: hsl(59, 100%, 50%); /* Bright yellow text color on hover */
+}
+
+/* Styles the navigation bar */
+.navbar ul {
+  list-style-type: none; /* Removes bullet points */
+  background-color: hsla(0, 100%, 50%, 0.973); /* Red background with slight transparency */
+  padding: 0px; /* Removes padding */
+  margin: 0px; /* Removes margin */
+  overflow: hidden; /* Prevents overflow */
+  height: 64px; /* Sets navbar height */
+  font-size: 26px; /* Sets font size for navbar items */
+}
+
+/* Styles links inside the navigation bar */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Changes background color of navbar links on hover */
+.navbar a:hover {
+  background-color: hsla(0, 95%, 29%, 0.493);
+}
+
+/* Aligns navigation list items horizontally */
+.navbar li {
+  float: left;
+}
+
+/* Sets height for links inside list items */
+li a {
+  height: 50px;
+}
+
+/* Makes the navigation bar span the full width of the page */
+.full-width {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Aligns universal navigation items to the right */
+.universal li {
+  float: right;
+}
+
+/* Styles the dropdown menu */
+.dropdown {
+  position: absolute; /* Positions dropdown relative to parent */
+  display: inline-block; /* Inline-block display */
+  z-index: 1; /* Ensures dropdown appears above other elements */
+  padding: 0; /* Removes padding */
+}
+
+/* Styles the dropdown content */
+.dropdown-content {
+  display: none; /* Hides dropdown content by default */
+  position: relative; /* Positions dropdown content relative to parent */
+  margin-left: -200px; /* Adjusts horizontal position */
+  margin-top: 25px; /* Adjusts vertical position */
+  background-color: #f9f9f9; /* Light gray background */
+  min-width: 10px; /* Minimum width */
+  max-height: 200px; /* Maximum height */
+  overflow: scroll; /* Adds scroll for overflow content */
+  width: 220px; /* Sets dropdown width */
+  box-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.2); /* Adds shadow for depth */
+  z-index: 1000; /* Ensures dropdown content appears above other elements */
+}
+
+/* Styles links inside the dropdown menu */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Changes background color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: hsl(0, 76%, 46%);
+}
+
+/* Displays the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Styles the font selection icon */
+.font-selection {
+  width: auto;
+  height: 40px;
+  position: relative;
+  margin-left: -40px;
+  margin-bottom: -56px;
+  padding-bottom: 25px;
+  background-color: transparent;
+}
+
+/* Styles the language selection icon */
+.language-selection {
+  width: auto;
+  height: 40px;
+}
+
+/* Aligns text and images in a flex container */
+.text-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles images inside the text-with-image container */
+.text-with-image img {
+  width: 375px;
+  height: auto;
+  margin-left: 30px;
+  padding-left: 30px;
+}
+
+/* Adds zoom effect to elements with the zoom class */
+.zoom {
+  padding: 0px; /* Removes padding */
+  background: none; /* No background */
+  transition: transform .2s; /* Smooth zoom transition */
+  width: auto; /* Automatic width */
+  height: auto; /* Automatic height */
+  margin: 0 auto; /* Centers element */
+  box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Adds shadow */
+}
+
+/* Enlarges element on hover */
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(2.4); /* Scales element */
+}
+
+div.information {
+  padding: 50px;
+  width: 430px;
+}
+
+div.polaroid {
+  width: 530px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 10px;
+}

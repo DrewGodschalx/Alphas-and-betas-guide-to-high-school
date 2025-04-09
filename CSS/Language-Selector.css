@@ -1,0 +1,83 @@
+/* Ensures the h3 text stays on the same line */
+h3 {
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Removes bullet points from list items */
+ul, li {
+  list-style-type: none; /* Removes default list styling */
+}
+
+/* Centers items in the container using grid layout */
+.container {
+  display: grid; /* Enables grid layout */
+  align-items: center; /* Vertically centers items */
+  grid-template-columns: 1fr 0.5fr 1fr; /* Defines column sizes */
+  column-gap: 5px; /* Adds spacing between columns */
+}
+
+/* Styles text with a specific font size and alignment */
+.text {
+  font-size: 20px; /* Sets font size */
+  margin-left: 0px; /* Removes left margin */
+  text-align: center; /* Centers text */
+}
+
+/* Styles for the table and hyperlinks inside it */
+table ul {
+  margin: 0; /* Removes margin */
+  padding: 0; /* Removes padding */
+  text-decoration: none; /* Removes underline from links */
+  font-family: Arial, sans-serif; /* Sets font-family with fallback */
+}
+
+/* Adds borders to the table, headers, and cells */
+table, th, td {
+  border: 1px solid black; /* Adds black border */
+}
+
+/* Centers the table horizontally */
+.center {
+  margin-left: auto; /* Automatically adjusts left margin */
+  margin-right: auto; /* Automatically adjusts right margin */
+  padding-left: 98px; /* Adds left padding */
+}
+
+/* Removes underline from links and inherits text color */
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits text color */
+}
+
+/* Changes background color on hover for links */
+table a:hover {
+  background-color: hsl(0, 0%, 59%); /* Light gray background on hover */
+}
+
+/* Custom scrollbar styles */
+body {
+  --sb-track-color: hsla(231, 100%, 50%, 0.5); /* Light blue track color */
+  --sb-thumb-color: #705da9; /* Purple thumb color */
+  --sb-size: 14px; /* Scrollbar width */
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size); /* Sets scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color); /* Sets track background color */
+  border-radius: 4px; /* Rounds track corners */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color); /* Sets thumb background color */
+  border-radius: 4px; /* Rounds thumb corners */
+  border: 1px solid #232E33; /* Adds border to thumb */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color); /* Fallback for unsupported browsers */
+  }
+}

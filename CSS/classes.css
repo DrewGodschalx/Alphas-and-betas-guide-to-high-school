@@ -1,0 +1,226 @@
+/* Set the background color and font for the body */
+body {
+  background-color: hwb(231 0% 0% / 0.418); /* Light blue background with transparency */
+  font-family: 'OpenDyslexic', sans-serif; /* Dyslexic-friendly font */
+}
+
+/* Set the font size for h1 elements */
+h1 {
+  font-size: 37px; /* Large font size for headings */
+}
+
+/* Set the font size for paragraph elements */
+p {
+  font-size: 20px; /* Medium font size for paragraphs */
+}
+
+/* Define a class for dyslexic-friendly font */
+.dyslexic-font {
+  font-family: 'OpenDyslexic', sans-serif; /* Applies dyslexic-friendly font */
+}
+
+/* Style unordered lists */
+ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  font-family: "DynaPuff", serif; /* Serif font for lists */
+  font-weight: normal; /* Normal font weight */
+  font-style: normal; /* Normal font style */
+  white-space:nowrap; /* Prevents wrapping */
+}
+
+/* Style links on hover within list items */
+li a:hover {
+  background-color: rgb(12, 89, 119); /* Changes background color on hover */
+  text-decoration-color: hsl(219, 96%, 39%); /* Changes text decoration color */
+  color: hsl(59, 100%, 50%); /* Changes text color */
+}
+
+/* Style the navbar */
+.navbar ul {
+  list-style-type: none; /* Removes bullet points */
+  background-color: hsla(0, 100%, 50%, 0.973); /* Red background with slight transparency */
+  padding: 0px; /* Removes padding */
+  margin: 0px; /* Removes margin */
+  overflow: hidden; /* Hides overflow */
+  height: 64px; /* Sets navbar height */
+  font-size: 26px; /* Sets font size */
+}
+
+/* Style links within the navbar */
+.navbar a {
+  color: white; /* White text color */
+  text-decoration: none; /* Removes underline */
+  padding: 15px; /* Adds padding */
+  display: block; /* Makes links block-level elements */
+  text-align: center; /* Centers text */
+}
+
+/* Change background color of navbar links on hover */
+.navbar a:hover {
+  background-color: hsla(0, 95%, 29%, 0.493); /* Darker red background on hover */
+}
+
+/* Float navbar list items to the left */
+.navbar li {
+  float: left; /* Aligns list items horizontally */
+}
+
+/* Set the height for links within list items */
+li a {
+  height: 50px; /* Sets link height */
+}
+
+/* Make an element full-width and fix its position */
+.full-width {
+  width: 100%; /* Full width */
+  position: fixed; /* Fixed position */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  right: 0; /* Aligns to the right */
+}
+
+/* Float list items to the right within the universal class */
+.universal li {
+  float: right; /* Aligns list items to the right */
+}
+
+/* Style dropdown menus */
+.dropdown {
+  position: absolute; /* Positions dropdown relative to parent */
+  display: inline-block; /* Inline-block display */
+  z-index: 1; /* Ensures dropdown appears above other elements */
+  padding: 0; /* Removes padding */
+}
+
+/* Style the content within dropdown menus */
+.dropdown-content {
+  display: none; /* Hides dropdown content by default */
+  position: relative; /* Positions content relative to parent */
+  margin-left: -200px; /* Adjusts horizontal position */
+  margin-top: 25px; /* Adjusts vertical position */
+  background-color: #f9f9f9; /* Light gray background */
+  min-width: 10px; /* Minimum width */
+  width: 220px; /* Fixed width */
+  box-shadow: 0px 8px 16px 0px hsla(0, 0%, 0%, 0.2); /* Adds shadow for depth */
+  z-index: 1000; /* Ensures dropdown content appears above other elements */
+}
+
+/* Style links within dropdown content */
+.dropdown-content a {
+  color: black; /* Black text color */
+  padding: 12px 16px; /* Adds padding */
+  text-decoration: none; /* Removes underline */
+  display: block; /* Makes links block-level elements */
+}
+
+/* Change background color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: hsl(0, 76%, 46%); /* Changes background color on hover */
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block; /* Shows dropdown content on hover */
+}
+
+/* Style for font selection dropdown */
+.font-selection {
+  width: auto; /* Automatic width */
+  height: 40px; /* Fixed height */
+  position: relative; /* Positions relative to parent */
+  margin-left: -40px; /* Adjusts horizontal position */
+  margin-bottom: -56px; /* Adjusts vertical position */
+  padding-bottom: 25px; /* Adds padding at the bottom */
+  background-color: transparent; /* Transparent background */
+}
+
+/* Display dropdown content on hover with scroll */
+.dropdown:hover .dropdown-content {
+  display: block; /* Shows dropdown content on hover */
+  max-height: 200px; /* Limits height */
+  overflow: scroll; /* Adds scroll for overflow */
+}
+
+/* Style for language selection dropdown */
+.language-selection {
+  width: auto; /* Automatic width */
+  height: 40px; /* Fixed height */
+}
+
+/* Style for text with image alignment */
+.text-with-image {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Distributes space evenly */
+}
+
+/* Style for images within text-with-image class */
+.text-with-image img {
+  width: 375px; /* Fixed width */
+  height: auto; /* Automatic height */
+  margin-left: 30px; /* Adds margin to the left */
+  padding-left: 200px; /* Adds padding to the left */
+  padding-bottom: 250px; /* Adds padding to the bottom */
+  padding-top: 50px; /* Adds padding to the top */
+}
+
+/* Custom scrollbar styles */
+body {
+  --sb-track-color: hsla(231, 100%, 50%, 0.5); /* Light blue track color */
+  --sb-thumb-color: hwb(231 0% 0% / 0.418); /* Purple thumb color */
+  --sb-size: 14px; /* Scrollbar width */
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size); /* Sets scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color); /* Sets track background color */
+  border-radius: 4px; /* Rounds track corners */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color); /* Sets thumb background color */
+  border-radius: 4px; /* Rounds thumb corners */
+  border: 1px solid #232E33; /* Adds border to thumb */
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color); /* Fallback for unsupported browsers */
+  }
+}
+
+/* Zoom effect for images */
+.zoom {
+  padding: 0px; /* Removes padding */
+  background: none; /* No background */
+  transition: transform 0.2s; /* Smooth zoom transition */
+  width: auto; /* Automatic width */
+  height: auto; /* Automatic height */
+  margin: 0 auto; /* Centers element */
+  box-shadow: 3px 4px 10px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Adds shadow for depth */
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 scaling */
+  -webkit-transform: scale(1.1); /* Safari scaling */
+  transform: scale(2.4); /* Scales image on hover */
+}
+
+/* Information box styling */
+div.information {
+  padding: 50px; /* Adds padding */
+  width: 430px; /* Fixed width */
+}
+
+/* Polaroid-style box styling */
+div.polaroid {
+  width: 530px; /* Fixed width */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Adds shadow for depth */
+  text-align: center; /* Centers text */
+  border-radius: 10px; /* Rounds corners */
+}
